@@ -1,9 +1,11 @@
-FROM caddy:builder-alpine AS builder
+FROM caddy:builder-alpine-builder AS builder
 
-RUN caddy-builder \
-    github.com/caddy-dns/cloudflare \
-    https://github.com/libdns/cloudflare.git
+RUN xcaddy \
+    --with github.com/caddy-dns/cloudflare \
+    --with github.com/libdns/cloudflare.git
 
-FROM caddy:caddy:builder-alpine
+FROM caddy:builder-alpine
+
+
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
