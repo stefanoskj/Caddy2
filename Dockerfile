@@ -1,10 +1,10 @@
-FROM armv7/caddy:builder-alpine-builder AS builder
+FROM arm32v7/caddy:builder-alpine-builder AS builder
 
 RUN xcaddy \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/libdns/cloudflare.git
 
-FROM caddy:builder-alpine
+FROM arm32v7/caddy:builder-alpine
 
 
 
