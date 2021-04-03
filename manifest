@@ -1,5 +1,5 @@
 {
    "name": "caddy2+cloudflare",
-   "tag": "latest",
-   "architecture": "arm",
+   "tag": "2.3.0-alpine",
+   "architecture": "arm32v7",
 }
