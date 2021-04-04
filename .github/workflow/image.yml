@@ -17,5 +17,5 @@ jobs:
       - name: build the image
         run: |
           docker buildx build --push \
-            --tag stefanoskj80/multi_arch:latest \
+            --tag stefanoskj80/caddy2:latest \
             --platform linux/arm64,linux/arm/v7 .
