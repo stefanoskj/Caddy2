@@ -1,6 +1,6 @@
 FROM caddy:2.3.0-alpine AS builder
 
-RUN xcaddy build \
+RUN caddy build \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/libdns/cloudflare.git
 
