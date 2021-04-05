@@ -5,7 +5,8 @@ RUN xcaddy build \
     --with github.com/libdns/cloudflare \
     --with github.com/greenpau/caddy-auth-jwt \
     --with github.com/greenpau/caddy-auth-portal \
-    --with github.com/greenpau/caddy-trace
+    --with github.com/greenpau/caddy-trace \
+    --with github.com/greenpau/go-identity
 
 FROM caddy:2.3.0-alpine
 
